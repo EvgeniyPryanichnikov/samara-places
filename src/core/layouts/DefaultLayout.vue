@@ -1,9 +1,15 @@
 <template>
-  <div>
-    <header>Заголовок</header>
-    <main>
+  <Header/>
+    <div>
       <slot /> <!-- Здесь будет отображаться содержимое страницы -->
-    </main>
-    <footer>Футер</footer>
-  </div>
+    </div>
+  <footer>Футер</footer>
 </template>
+
+
+<script setup lang="ts">
+import Header from '../components/layout/Header.vue';
+</script>
+
+<style scoped>
+</style>

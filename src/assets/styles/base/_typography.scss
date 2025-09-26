@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url('@/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url('@/assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fw-500 {
+  font-family: "Roboto-Medium", sans-serif;
+}
+
+h1 {
+  @include fw-500;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+
+h2 {
+  @include fw-500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h3 {
+  @include fw-500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h4 {
+  @include fw-500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h5 {
+  @include fw-500;
+  font-size: 14px;
+  line-height: 22px;
+}

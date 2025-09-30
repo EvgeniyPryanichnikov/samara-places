@@ -1,5 +1,7 @@
 <template>
   <header class="header">
+    <HeaderNav />
+
     <div class="header__content">
       <h1 class="header__title">
         Самара
@@ -13,11 +15,12 @@
 </template>
 
 <script setup lang="ts">
+import HeaderNav from './HeaderNav.vue';
 </script>
 
 <style lang="scss" scoped>
   @import '@/assets/styles/base/_typography.scss';
-   @import '@/assets/styles/abstracts/_mixins.scss';
+  @import '@/assets/styles/abstracts/_mixins.scss';
 
   .header {
     width: 100%;

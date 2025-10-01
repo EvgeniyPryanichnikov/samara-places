@@ -240,14 +240,19 @@ textarea {
   font-weight: normal;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 button:focus {
   outline: none;   
 }
 
 
 ::-webkit-scrollbar {
-  width: 6px; /* ширина для вертикального скролла */
-  height: 6px; /* высота для горизонтального скролла */
+  width: 6px; 
+  height: 6px;
 }
 
 /* ползунок скроллбара */

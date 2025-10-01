@@ -1,8 +1,6 @@
 <template>
   <main>
     <DefaultLayout>
-      <RouterLink to="/">Go to Home</RouterLink>
-      <RouterLink to="/about">Go to About</RouterLink>
       <router-view />
     </DefaultLayout>
   </main>

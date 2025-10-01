@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <HeaderNav />
+    <!-- <HeaderNav /> -->
 
     <div class="header__content">
       <h1 class="header__title">
@@ -11,11 +11,14 @@
         От Волжских просторов до Жигулёвских вершин.
       </h2>
     </div>
+
+    <HeaderButton />
   </header>
 </template>
 
 <script setup lang="ts">
-import HeaderNav from './HeaderNav.vue';
+// import HeaderNav from './HeaderNav.vue';
+import HeaderButton from './HeaderButton.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -25,8 +28,9 @@ import HeaderNav from './HeaderNav.vue';
   .header {
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: end;
+    @include flex-center;
+    flex-direction: column;
+    gap: 80px;
     background-image: url("/src/assets/images/monument-slavy.webp");
     background-size: cover;
     background-position: center;
@@ -36,12 +40,28 @@ import HeaderNav from './HeaderNav.vue';
       color: white;
       @include fw-500;
       @include flex-column;
+      @include flex-center;
       gap: 12px;
-      margin: auto 82px;
+      margin-top: 40px;
+    }
+
+    .header__title {
+      font-size: 60px;
     }
 
     .header__subtitle {
-      font-size: 30px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+     @include mq('768') {
+      .header__subtitle {
+        font-size: 30px;
+      }
+
+      .header__title {
+        font-size: 100px;
+      }
     }
   }
 </style>

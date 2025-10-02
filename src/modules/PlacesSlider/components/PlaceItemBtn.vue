@@ -1,11 +1,19 @@
 <template>
-  <button class="place-item__button">
+  <button
+    @click="$emit('navigate-to-place', placeId)"
+    class="place-item__button">
     Вперёд
   </button>
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  placeId: number;
+}>()
 
+defineEmits<{
+  'navigate-to-place': [id: number]
+}>()
 </script>
 
 <style lang="scss" scoped>

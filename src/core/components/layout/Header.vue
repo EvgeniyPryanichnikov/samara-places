@@ -31,7 +31,7 @@ import HeaderButton from './HeaderButton.vue';
     @include flex-center;
     flex-direction: column;
     gap: 80px;
-    background-image: url("/src/assets/images/monument-slavy.webp");
+    background-image: url("/images/monument-slavy.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

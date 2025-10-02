@@ -1,17 +1,17 @@
 import type { RouteRecordRaw } from 'vue-router'
-import MainPage from './modules/MainPage/MainPage.vue'
-import AboutCompany from './modules/AboutCompany/AboutCompany.vue'
+import MainPage from './pages/MainPage/MainPage.vue'
+import PlaceDetails from './pages/PlaceDetails/PlaceDetails.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'MainPage',
     component: MainPage,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: AboutCompany,
+    path: '/place/:title',
+    name: 'PlaceDetails',
+    component: PlaceDetails,
   },
 ]
 

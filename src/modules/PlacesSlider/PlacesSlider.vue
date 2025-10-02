@@ -12,50 +12,15 @@
         <Pagination />
       </template>
     </Carousel>
-    
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
-import PlaceItem from './PlaceItem.vue';
-
-// Данные для слайдера
-const placesList = ref([
-  {
-    id: 1,
-    title: 'Ширяево',
-    description: 'Село находится в Самарской области, на правом берегу Волги...',
-    image: '/path-to-image/shiryaevo.jpg'
-  },
-  {
-    id: 2,
-    title: 'Ширяево',
-    description: 'Село находится в Самарской области, на правом берегу Волги...',
-    image: '/path-to-image/shiryaevo.jpg'
-  },
-  {
-    id: 3,
-    title: 'Ширяево',
-    description: 'Село находится в Самарской области, на правом берегу Волги...',
-    image: '/path-to-image/shiryaevo.jpg'
-  },
-  {
-    id: 4,
-    title: 'Ширяево',
-    description: 'Село находится в Самарской области, на правом берегу Волги...',
-    image: '/path-to-image/shiryaevo.jpg'
-  },
-  {
-    id: 5,
-    title: 'Ширяево',
-    description: 'Село находится в Самарской области, на правом берегу Волги...',
-    image: '/path-to-image/shiryaevo.jpg'
-  },
-  // Добавьте другие места здесь...
-])
+import { ref, onMounted } from 'vue'
+import placesList from '@/core/data/places'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+import PlaceItem from './components/PlaceItem.vue'
 
 // Адаптивность
 const breakpoints = ref({
@@ -96,6 +61,9 @@ const breakpoints = ref({
     }
     .carousel__pagination {
       bottom: -16px;
+    }
+    .carousel__slide {
+      padding: 0;
     }
     .carousel__pagination-button {
       background-color: rgba(59, 130, 246, .5);

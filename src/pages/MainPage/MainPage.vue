@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import PlacesSlider from '../PlacesSlider/PlacesSlider.vue';
+import PlacesSlider from '@/modules/PlacesSlider/PlacesSlider.vue';
 </script>
 
 <style lang="scss" scoped>

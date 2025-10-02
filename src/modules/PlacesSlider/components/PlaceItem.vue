@@ -1,0 +1,69 @@
+<template>
+  <div class="place-item">
+    <img 
+      class="place-item__img"
+      :src="placeData.preview_image" 
+      :alt="placeData.title"
+      loading="lazy"
+    >
+
+    <div class="place-item__content">
+      <h3>{{placeData.title}}</h3>
+
+      <p class="place-item__description">
+        {{ placeData.preview_description }}
+      </p>
+    </div>
+
+    <PlaceItemBtn
+      :placeId="placeData.id"
+      @navigate-to-place="navigateToPlace"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+import PlaceItemBtn from './PlaceItemBtn.vue'
+import type { Place } from '@/types'
+
+const router = useRouter()
+
+const props = defineProps<{
+  placeData: Place;
+}>()
+
+const navigateToPlace = (placeId: number) => {
+  // Переход на страницу места с использованием title в URL
+  router.push(`/place/${props.placeData.title}`)
+  
+}
+</script>
+
+<style lang="scss" scoped>
+  @import '@/assets/styles/base/_typography.scss';
+  @import '@/assets/styles/abstracts/_mixins.scss';
+
+  .place-item {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: white;
+
+    .place-item__img {
+      width: 100%;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 18px
+    }
+    .place-item__content {
+      @include flex-column;
+      gap: 12px;
+    }
+    .place-item__description {
+      line-height: 18px;
+    }
+  }
+</style>

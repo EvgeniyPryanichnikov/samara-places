@@ -2,7 +2,7 @@
   <div class="places-slider">
     <h2 class="places-slider__title">Места</h2>
 
-    <Carousel :items-to-show="3.2" :wrap-around="true" :autoplay="6000" :breakpoints="breakpoints" :gap="20">
+    <Carousel :items-to-show="3.2" :wrap-around="true" :breakpoints="breakpoints" :gap="20">
       <Slide v-for="place in placesList" :key="place.id">
         <PlaceItem :place-data="place" />
       </Slide>

@@ -1,30 +1,33 @@
 <template>
-  <div class="place-item">
+  <article class="place-item">
     <img 
       class="place-item__img"
       :src="placeData.preview_image" 
       :alt="placeData.title"
       loading="lazy"
-    >
+    />
 
     <div class="place-item__content">
-      <h3>{{placeData.title}}</h3>
+      <h3>{{ placeData.title }}</h3>
 
       <p class="place-item__description">
         {{ placeData.preview_description }}
       </p>
     </div>
 
+    <PlaceItemStatuses />
+
     <PlaceItemBtn
       :placeId="placeData.id"
       @navigate-to-place="navigateToPlace"
     />
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import PlaceItemBtn from './PlaceItemBtn.vue'
+import PlaceItemStatuses from './PlaceItemStatuses.vue'
 import type { Place } from '@/types'
 
 const router = useRouter()

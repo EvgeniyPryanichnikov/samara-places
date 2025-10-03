@@ -13,10 +13,10 @@ const places = [
   {
     id: 2,
     type: 'nature',
-    title: 'Самара',
+    title: 'Ягодное',
     preview_description: 'Село находится в Самарской области, на правом берегу Волги...',
     main_description: '',
-    preview_image: '/images/places/shiryaevo.webp',
+    preview_image: '/images/places/yagodnoe.webp',
     main_images: [],
     coords: []
   },
@@ -24,10 +24,10 @@ const places = [
   {
     id: 3,
     type: 'nature',
-    title: 'Ширяево',
+    title: 'гора Стрельная',
     preview_description: 'Село находится в Самарской области, на правом берегу Волги...',
     main_description: '',
-    preview_image: '/images/places/shiryaevo.webp',
+    preview_image: '/images/places/gora-strelnaya.webp',
     main_images: [],
     coords: []
   },

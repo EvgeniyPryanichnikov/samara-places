@@ -1,9 +1,9 @@
 <template>
   <Header/>
 
-  <div>
+  <main>
     <slot /> <!-- Здесь будет отображаться содержимое страницы -->
-  </div>
+  </main>
 
   <footer>Футер</footer>
 </template>

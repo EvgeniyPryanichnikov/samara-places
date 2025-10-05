@@ -15,7 +15,9 @@
       </p>
     </div>
 
-    <PlaceItemStatuses />
+    <PlaceItemStatuses
+      :statuses="placeData.STATUSES"
+    />
 
     <PlaceItemBtn
       :placeId="placeData.id"

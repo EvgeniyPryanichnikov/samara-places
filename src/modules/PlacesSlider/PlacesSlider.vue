@@ -27,7 +27,7 @@ const breakpoints = ref({
   300: { itemsToShow: 1 },
   768: { itemsToShow: 2 },
   1024: { itemsToShow: 3 },
-  1200: { itemsToShow: 3 }
+  1200: { itemsToShow: 3.07 }
 })
 </script>
 
@@ -37,7 +37,11 @@ const breakpoints = ref({
   .places-slider {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0;
+
+    @include mq('768') {  
+      padding: 20px;
+    }
 
     .places-slider__title {
       font-size: 30px;
@@ -58,12 +62,6 @@ const breakpoints = ref({
         top: 35%;
         display: block;
       }
-    }
-    .carousel__pagination {
-      bottom: -16px;
-    }
-    .carousel__slide {
-      padding: 0;
     }
     .carousel__pagination-button {
       background-color: rgba(59, 130, 246, .5);

@@ -16,20 +16,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted  } from 'vue'
-// import placesList from '@/core/data/places'
+import { ref } from 'vue'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import PlaceItem from './components/PlaceItem.vue'
 import { usePlaces } from '@/core/composables/usePlaces'
 
-const { places, loading, error, fetchPlaces } = usePlaces()
+const { places, loading, error } = usePlaces()
 
-onMounted(() => {
-  fetchPlaces()
-})
-
-console.log(places.value)
 
 // Адаптивность
 const breakpoints = ref({

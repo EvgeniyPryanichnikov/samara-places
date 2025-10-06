@@ -19,7 +19,7 @@ export type PlaceStatuses = {
   has_mountain: boolean;
 }
 
-export type StatusKey = keyof Statuses;
+export type StatusKey = keyof PlaceStatuses;
 
 export interface StatusIcon {
   component: any;

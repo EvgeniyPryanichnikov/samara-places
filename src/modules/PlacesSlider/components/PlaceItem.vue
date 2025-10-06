@@ -1,10 +1,9 @@
 <template>
   <article class="place-item">
-    <img 
+    <BaseImage
       class="place-item__img"
-      :src="placeData.preview_image" 
+      :src="placeData.preview_image"
       :alt="placeData.title"
-      loading="lazy"
     />
 
     <div class="place-item__content">
@@ -28,6 +27,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import BaseImage from '@/core/components/UI/image/BaseImage.vue'
 import PlaceItemBtn from './PlaceItemBtn.vue'
 import PlaceItemStatuses from './PlaceItemStatuses.vue'
 import type { Place } from '@/types'

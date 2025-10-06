@@ -1,4 +1,3 @@
-// composables/usePlaces.ts
 import { useFetch } from '@vueuse/core'
 import { computed } from 'vue'
 import type { Place, PlaceStatuses } from '@/types'

@@ -27,6 +27,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { useCurrentPlaceStore } from '@/stores/current-place'
 import BaseImage from '@/core/components/UI/image/BaseImage.vue'
 import PlaceItemBtn from './PlaceItemBtn.vue'
 import PlaceItemStatuses from './PlaceItemStatuses.vue'
@@ -38,10 +39,20 @@ const props = defineProps<{
   placeData: Place;
 }>()
 
+const { setCurrentPlace } = useCurrentPlaceStore()
+
 const navigateToPlace = (placeId: number) => {
-  // Переход на страницу места с использованием title в URL
-  router.push(`/place/${props.placeData.title}`)
+  setCurrentPlace(props.placeData)
   
+  router.push({
+    name: 'PlaceDetails',
+    params: {
+      url_title: props.placeData.url_title
+    },
+    query: {
+      id: props.placeData.id,
+    }
+  })
 }
 </script>
 

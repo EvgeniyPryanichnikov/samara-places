@@ -8,6 +8,7 @@ export interface Place {
   STATUSES: PlaceStatuses; 
   coords?: number[];
   type: string;
+  url_title: string;
 }
 
 export type PlaceStatuses = {

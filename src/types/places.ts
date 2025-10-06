@@ -5,16 +5,27 @@ export interface Place {
   preview_image: string;
   main_description?: string;
   main_images?: string[];
-  STATUSES: {
-    has_beach: boolean;
-    has_bike: boolean;
-    has_eat: boolean;
-    has_camp: boolean;
-    has_nature: boolean;
-    has_mountain: boolean;
-  }; 
+  STATUSES: PlaceStatuses; 
   coords?: number[];
   type: string;
+}
+
+export type PlaceStatuses = {
+  has_beach: boolean;
+  has_bike: boolean;
+  has_eat: boolean;
+  has_camp: boolean;
+  has_nature: boolean;
+  has_mountain: boolean;
+}
+
+export type StatusKey = keyof Statuses;
+
+export interface StatusIcon {
+  component: any;
+  key: StatusKey;
+  name: string;
+  tooltip: string;
 }
 
 

@@ -3,7 +3,7 @@
     <h2 class="places-slider__title">Места</h2>
 
     <Carousel :items-to-show="3.2" :wrap-around="true" :breakpoints="breakpoints" :gap="20">
-      <Slide v-for="place in placesList" :key="place.id">
+      <Slide v-for="place in places" :key="place.id">
         <PlaceItem :place-data="place" />
       </Slide>
 
@@ -16,11 +16,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import placesList from '@/core/data/places'
+import { ref, onMounted  } from 'vue'
+// import placesList from '@/core/data/places'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import PlaceItem from './components/PlaceItem.vue'
+import { usePlaces } from '@/core/composables/usePlaces'
+
+const { places, loading, error, fetchPlaces } = usePlaces()
+
+onMounted(() => {
+  fetchPlaces()
+})
+
+console.log(places.value)
 
 // Адаптивность
 const breakpoints = ref({

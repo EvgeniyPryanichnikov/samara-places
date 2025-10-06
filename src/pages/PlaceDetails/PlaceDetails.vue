@@ -11,6 +11,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { usePlaces } from '@/core/composables/usePlaces'
+import type { Place } from '@/types'
 import BaseImage from '@/core/components/UI/image/BaseImage.vue'
 
 const route = useRoute()
@@ -20,11 +21,8 @@ const place = computed(() => {
   const placeId = route.query.id
   
   if (!placeId || places.value.length === 0) return null
-
-  console.log(placeId)
   
-  // Ищем место по ID или url_title
-  return places.value.find(p => p.id === Number(placeId)) || null
+  return places.value.find((p: Place) => p.id === Number(placeId)) || null
 })
 </script>
 

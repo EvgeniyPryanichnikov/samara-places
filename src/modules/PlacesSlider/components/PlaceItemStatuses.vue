@@ -28,7 +28,7 @@ import HamburgerIcon from '@/assets/icons/place-statuses/hamburger.svg'
 import NaturalIcon from '@/assets/icons/place-statuses/pure-natural.svg'
 import OutdoorIcon from '@/assets/icons/place-statuses/outdoor.svg'
 import TentIcon from '@/assets/icons/place-statuses/tent.svg'
-import type { Statuses, StatusIcon } from '../types'
+import type { Statuses, StatusIcon } from '@/types'
 
 const props = defineProps<{
   statuses: Statuses;

@@ -2,6 +2,8 @@
   <section class="map-container">
     <PlacesMap
       :places="places"
+      :width="'100%'"
+      :height="'650px'"
     />
   </section>
 </template>
@@ -16,7 +18,7 @@ const { places } = usePlaces()
 
 <style scoped>
   .map-container {
-    /* max-width: 1600px;
-    margin: 0 auto; */
+    max-width: 1500px;
+    margin: 0 auto;
   }
 </style>

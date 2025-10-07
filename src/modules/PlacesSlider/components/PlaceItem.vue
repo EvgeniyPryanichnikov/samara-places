@@ -71,6 +71,7 @@ const navigateToPlace = (placeId: number) => {
     .place-item__img {
       width: 100%;
       height: 300px;
+      object-fit: cover;
       background-color: #fff;
       border-radius: 18px
     }

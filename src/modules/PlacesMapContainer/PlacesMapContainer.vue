@@ -13,7 +13,6 @@ import PlacesMap from './components/PlacesMap.vue'
 import { usePlaces } from '@/core/composables/usePlaces'
 
 const { places } = usePlaces()
-
 </script>
 
 <style scoped>

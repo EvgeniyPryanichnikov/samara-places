@@ -24,12 +24,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { 
-  YandexMap, 
-  YandexMapDefaultFeaturesLayer, 
-  YandexMapDefaultSchemeLayer, 
-  YandexMapMarker 
-} from 'vue-yandex-maps'
+import { YandexMap, YandexMapDefaultFeaturesLayer, YandexMapDefaultSchemeLayer, YandexMapMarker } from 'vue-yandex-maps'
 import NatureMarker from '@/assets/icons/map-icons/nature-pin.svg'
 import CityMarker from '@/assets/icons/map-icons/city-pin.svg'
 import type { Place } from '@/types'
@@ -68,6 +63,6 @@ const onPlaceClick = (place: Place) => {
 
 <style lang="scss" scoped>
   :deep(.ymaps3x0--map-container) {
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
   }
 </style>

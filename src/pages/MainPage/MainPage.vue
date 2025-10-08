@@ -2,13 +2,13 @@
   <section class="main-page">
     <PlacesSlider />
 
-    <PlacesMapContainer />
+    <PlacesExplorer />
   </section>
 </template>
 
 <script setup lang="ts">
 import PlacesSlider from '@/modules/PlacesSlider/PlacesSlider.vue'
-import PlacesMapContainer from '@/modules/PlacesMapContainer/PlacesMapContainer.vue';
+import PlacesExplorer from '@/modules/PlacesExplorer/PlacesExplorer.vue'
 </script>
 
 <style lang="scss" scoped>

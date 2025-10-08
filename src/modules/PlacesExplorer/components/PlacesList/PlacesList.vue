@@ -1,5 +1,5 @@
 <template>
-  <ul class="places-list">
+  <ul  class="places-list">
     <PlaceListItem
       v-for="(place, id) in places"
       :key="id"
@@ -18,9 +18,12 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
+  @import '@/assets/styles/abstracts/_mixins.scss';
+  
   .places-list {
-    padding: 20px;
-    border-radius: 20px 0 0 20px;
-    background-color: white;
+    @include flex-column;
+    overflow-y: scroll;
+    height: 516px;
+    gap: 8px;
   }
 </style>

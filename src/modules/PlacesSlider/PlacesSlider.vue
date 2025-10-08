@@ -1,5 +1,5 @@
 <template>
-  <div class="places-slider">
+  <section class="places-slider">
     <h2 class="places-slider__title">Места</h2>
 
     <Carousel :items-to-show="3.2" :wrap-around="true" :breakpoints="breakpoints" :gap="20">
@@ -12,7 +12,7 @@
         <Pagination />
       </template>
     </Carousel>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

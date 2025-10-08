@@ -9,6 +9,7 @@ export interface Place {
   coords?: number[];
   type: string;
   url_title: string;
+  search_tags: string[];
 }
 
 export type PlaceStatuses = {

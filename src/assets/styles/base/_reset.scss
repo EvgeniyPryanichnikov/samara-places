@@ -165,6 +165,10 @@ input[type="radio"] {
   vertical-align: baseline;
 }
 
+input {
+  all: unset;
+}
+
 small {
   font-size: 0.875em;
 }

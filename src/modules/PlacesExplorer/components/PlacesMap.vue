@@ -65,4 +65,10 @@ const onPlaceClick = (place: Place) => {
   :deep(.ymaps3x0--map-container) {
     border-radius: 0 20px 20px 0;
   }
+  :deep(.ymaps3x0--map) {
+    cursor: grab;
+  }
+  :deep(.ymaps3x0--map:active) {
+    cursor: grabbing;
+  }
 </style>

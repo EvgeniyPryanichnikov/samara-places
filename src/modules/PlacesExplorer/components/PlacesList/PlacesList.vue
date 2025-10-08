@@ -1,5 +1,8 @@
 <template>
-  <ul  class="places-list">
+  <ul 
+    v-if="places"
+    class="places-list"
+  >
     <PlaceListItem
       v-for="(place, id) in places"
       :key="id"

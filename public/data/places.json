@@ -16,6 +16,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["Ширяево", "природа", "за волгу"],
     "coords": [50.019138, 53.414661 ]
   },
 
@@ -36,6 +37,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["Ягодное", "природа", "жигулевское море"],
     "coords": [49.039328, 53.610925]
   },
 
@@ -56,6 +58,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["гора", "Стрельная", "природа", "горы", "за волгу"],
     "coords": [49.756993, 53.435333]
   },
 
@@ -76,6 +79,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["Вёртолётная площадка", "красивый вид"],
     "coords": [50.197481, 53.343815 ]
   },
 
@@ -96,6 +100,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["Царёв курган", "курган", "природа"],
     "coords": [50.121870, 53.421826]
   },
 
@@ -104,7 +109,7 @@
     "type": "nature",
     "title": "Замок Гарибальди",
     "url_title": "garibaldy",
-    "preview_description": "Село находится в Самарской области, на правом берегу Волги...",
+    "preview_description": "Село находится в Самарской области, на правом берегу ...",
     "main_description": "",
     "preview_image": "/images/places/garibaldy.webp",
     "main_images": [],
@@ -116,7 +121,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": ["замок", "хрящевка", "гарибальди"],
+    "search_tags": [ "хрящевка", "гарибальди"],
     "coords": [ 49.085636, 53.821786 ]
   },
 
@@ -137,6 +142,7 @@
       "has_nature": true,
       "has_mountain": true
     },
+    "search_tags": ["слон", "дача", "головкин", "в городе"],
     "coords": [50.173365, 53.247292]
   }
 ]

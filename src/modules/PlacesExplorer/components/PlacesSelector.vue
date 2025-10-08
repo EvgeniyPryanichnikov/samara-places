@@ -26,6 +26,8 @@ const { searchQuery, filteredPlaces, clearSearch } = usePlacesSearch(places)
 const displayedPlaces = computed(() => {
   return searchQuery.value ? filteredPlaces.value : places.value
 })
+
+console.log(searchQuery.value)
 </script>
 
 <style lang=scss scoped>

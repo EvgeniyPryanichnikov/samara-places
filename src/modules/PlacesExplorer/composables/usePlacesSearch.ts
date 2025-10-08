@@ -5,7 +5,6 @@ export function usePlacesSearch(places: ComputedRef<Place[]>) {
   const searchQuery = ref('')
   
   const filteredPlaces = computed(() => {
-    // Используем places.value для доступа к актуальному значению
     const placesArray = places.value
     if (!searchQuery.value.trim()) {
       return placesArray
@@ -13,15 +12,39 @@ export function usePlacesSearch(places: ComputedRef<Place[]>) {
     
     const query = searchQuery.value.toLowerCase().trim()
     
-    return placesArray.filter((place: Place) => {
-      return (
-        place.title.toLowerCase().includes(query) ||
-        place.main_description?.toLowerCase().includes(query) ||
-        place.preview_description?.toLowerCase().includes(query) ||
-        place.type.toLowerCase().includes(query) ||
-        place.search_tags.some(tag => 
-          tag.toLowerCase().includes(query)
+    // Разбиваем запрос на отдельные слова
+    const searchWords = query.split(' ').filter(word => word.length > 1) // игнорируем слова короче 2 символов
+    
+    // Если запрос состоит из одного слова - ищем как раньше
+    if (searchWords.length === 1) {
+      const singleWord = searchWords[0]
+      return placesArray.filter((place: Place) => {
+        return (
+          place.title.toLowerCase().includes(singleWord) ||
+          place.main_description?.toLowerCase().includes(singleWord) ||
+          place.preview_description?.toLowerCase().includes(singleWord) ||
+          place.type.toLowerCase().includes(singleWord) ||
+          place.search_tags.some(tag => 
+            tag.toLowerCase().includes(singleWord)
+          )
         )
+      })
+    }
+    
+    // Если несколько слов - ищем места, где есть хотя бы одно слово
+    return placesArray.filter((place: Place) => {
+      // Создаем большую строку для поиска из всех полей
+      const searchableText = `
+        ${place.title}
+        ${place.main_description || ''}
+        ${place.preview_description || ''}
+        ${place.type}
+        ${place.search_tags.join(' ')}
+      `.toLowerCase()
+      
+      // Проверяем, есть ли хотя бы одно слово из запроса
+      return searchWords.some(word => 
+        searchableText.includes(word)
       )
     })
   })

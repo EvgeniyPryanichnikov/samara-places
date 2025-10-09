@@ -16,7 +16,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": ["Ширяево", "природа", "за волгу"],
+    "search_tags": ["на природу", "природа", "за волгу"],
     "coords": [50.019138, 53.414661 ]
   },
 
@@ -58,7 +58,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": ["гора", "Стрельная", "природа", "горы", "за волгу"],
+    "search_tags": ["горы", "природа", "горы", "за волгу"],
     "coords": [49.756993, 53.435333]
   },
 
@@ -79,7 +79,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": ["Вёртолётная площадка", "красивый вид"],
+    "search_tags": ["красивый вид"],
     "coords": [50.197481, 53.343815 ]
   },
 
@@ -100,7 +100,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": ["Царёв курган", "курган", "природа"],
+    "search_tags": ["природа"],
     "coords": [50.121870, 53.421826]
   },
 
@@ -121,7 +121,7 @@
       "has_nature": true,
       "has_mountain": true
     },
-    "search_tags": [ "хрящевка", "гарибальди"],
+    "search_tags": [ "хрящевка"],
     "coords": [ 49.085636, 53.821786 ]
   },
 
@@ -144,5 +144,26 @@
     },
     "search_tags": ["слон", "дача", "головкин", "в городе"],
     "coords": [50.173365, 53.247292]
+  },
+
+  {
+    "id": 7,
+    "type": "city",
+    "title": "Бар \"На Дне\"",
+    "url_title": "pivo_na_dne",
+    "preview_description": "Село находится в Самарской области, на правом берегу Волги...",
+    "main_description": "",
+    "preview_image": "/images/places/na-dne.webp",
+    "main_images": [],
+    "STATUSES": {
+      "has_beach": true,
+      "has_bike": true,
+      "has_eat": true,
+      "has_camp": true,
+      "has_nature": true,
+      "has_mountain": true
+    },
+    "search_tags": ["пиво", "gbdj", "жигулевское", "пивзавод", "жигуль"],
+    "coords": [50.09885, 53.201]
   }
 ]

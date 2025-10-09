@@ -10,6 +10,7 @@ export interface Place {
   type: string;
   url_title: string;
   search_tags: string[];
+  status_tags: string[];
 }
 
 export type PlaceStatuses = {

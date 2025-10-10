@@ -28,5 +28,16 @@ const props = defineProps<{
     overflow-y: scroll;
     height: 516px;
     gap: 8px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgb(59, 130, 246);
+      border-radius: 2px;
+    }
   }
 </style>

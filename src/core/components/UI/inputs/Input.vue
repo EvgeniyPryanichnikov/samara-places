@@ -106,7 +106,7 @@ watch(() => props.placeholderTexts, () => {
 .input {
   position: relative;
   width: 100%;
-  padding: 8px 12px;
+  padding: 8px 20px;
   background-color: rgba(59, 130, 246, 0.1);
   border-radius: 4px;
    

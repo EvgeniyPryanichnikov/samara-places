@@ -9,7 +9,10 @@
     <div class="place-item__content">
       <h3>{{ placeData.title }}</h3>
 
-      <p class="place-item__description">
+      <p 
+        class="place-item__description"
+        :title="placeData.preview_description"
+      >
         {{ placeData.preview_description }}
       </p>
     </div>
@@ -80,7 +83,12 @@ const navigateToPlace = (placeId: number) => {
       gap: 12px;
     }
     .place-item__description {
-      line-height: 18px;
+      height: 40px; // 3 строки * 18px line-height
+      line-height: 20px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
   }
 </style>

@@ -38,7 +38,7 @@ const getBadgeColor = (badge: string) => {
   .badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 
     .badge {
       font-size: 12px;
@@ -50,7 +50,7 @@ const getBadgeColor = (badge: string) => {
         color: #1e40af;
       }
       &.green { 
-        background: #a8f5c6; 
+        background: #a8f5cb; 
         color: #166534;
       }
       &.red { 

@@ -2,6 +2,8 @@
   <div class="place-selector">
     <h2>Найди своё место в Самаре</h2>
 
+    <WeatherWidget />
+
     <Input 
       v-model="searchQuery"
       placeholder="Поиск мест..."
@@ -17,6 +19,7 @@
 import { computed } from 'vue'
 import PlacesList from './PlacesList/PlacesList.vue'
 import Input from '@/core/components/UI/inputs/Input.vue'
+import WeatherWidget from '@/modules/WeatherWidget/WeatherWidget.vue'
 import { usePlaces } from '@/core/composables/usePlaces'
 import { usePlacesSearch } from '../composables/usePlacesSearch'
 

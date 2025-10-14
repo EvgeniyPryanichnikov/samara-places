@@ -33,7 +33,7 @@ defineEmits<{
     }
 
     &:hover {
-      background-color: rgba(59, 130, 246, .5);
+      background-color: darken(rgb(59, 130, 246), 10%);
     }
     &:active {
       transform: scale(0.95);

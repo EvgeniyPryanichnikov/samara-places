@@ -54,7 +54,7 @@ import HeaderButton from './HeaderButton.vue';
       font-size: 20px;
     }
 
-     @include mq('768') {
+    @include mq('768') {
       .header__subtitle {
         font-size: 30px;
       }

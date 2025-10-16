@@ -1,14 +1,25 @@
 <template>
   <section class="places-slider">
-    <h2 class="places-slider__title">Места</h2>
+    <h2 class="places-slider__title">
+      Места
+    </h2>
 
-    <Carousel :items-to-show="3.2" :wrap-around="true" :breakpoints="breakpoints" :gap="20">
-      <Slide v-for="place in places" :key="place.id">
+    <Carousel
+      :items-to-show="3.2"
+      :wrap-around="true"
+      :breakpoints="breakpoints"
+      :gap="20"
+    >
+      <Slide
+        v-for="place in places"
+        :key="place.id"
+      >
         <PlaceItem :place-data="place" />
       </Slide>
 
       <template #addons>
         <Navigation />
+
         <Pagination />
       </template>
     </Carousel>
@@ -24,13 +35,20 @@ import { usePlaces } from '@/core/composables/usePlaces'
 
 const { places, loading, error } = usePlaces()
 
-
 // Адаптивность
 const breakpoints = ref({
-  300: { itemsToShow: 1 },
-  768: { itemsToShow: 2 },
-  1024: { itemsToShow: 3 },
-  1200: { itemsToShow: 3.07 }
+  300: {
+    itemsToShow: 1
+  },
+  768: {
+    itemsToShow: 2
+  },
+  1024: {
+    itemsToShow: 3
+  },
+  1200: {
+    itemsToShow: 3.07
+  }
 })
 </script>
 
@@ -42,7 +60,7 @@ const breakpoints = ref({
     margin: 0 auto;
     padding: 20px 0;
 
-    @include mq('768') {  
+    @include mq('768') {
       padding: 20px;
     }
 

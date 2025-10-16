@@ -4,12 +4,12 @@
 
     <WeatherWidget />
 
-    <Input 
+    <Input
       v-model="searchQuery"
       placeholder="Поиск мест..."
     />
 
-    <PlacesList 
+    <PlacesList
       :places="displayedPlaces"
     />
   </div>
@@ -24,14 +24,14 @@ import { usePlaces } from '@/core/composables/usePlaces'
 import { usePlacesSearch } from '../composables/usePlacesSearch'
 
 const { places } = usePlaces()
-const { searchQuery, filteredPlaces, clearSearch } = usePlacesSearch(places)
+const { searchQuery, filteredPlaces } = usePlacesSearch(places)
 
 const displayedPlaces = computed(() => {
   return searchQuery.value ? filteredPlaces.value : places.value
 })
 </script>
 
-<style lang=scss scoped>
+<style lang="scss" scoped>
   @import '@/assets/styles/abstracts/_mixins.scss';
 
   .place-selector {

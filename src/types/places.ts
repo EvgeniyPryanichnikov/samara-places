@@ -5,7 +5,7 @@ export interface Place {
   preview_image: string;
   main_description?: string;
   main_images?: string[];
-  STATUSES: PlaceStatuses; 
+  STATUSES: PlaceStatuses;
   coords?: number[];
   type: string;
   url_title: string;
@@ -30,6 +30,5 @@ export interface StatusIcon {
   name: string;
   tooltip: string;
 }
-
 
 export type PlaceList = Place[];

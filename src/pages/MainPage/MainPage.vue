@@ -1,5 +1,7 @@
 <template>
   <section class="main-page">
+    <HeroBanner />
+
     <PlacesSlider />
 
     <PlacesExplorer />
@@ -7,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+import HeroBanner from '@/modules/HeroBanner/HeroBanner.vue'
 import PlacesSlider from '@/modules/PlacesSlider/PlacesSlider.vue'
 import PlacesExplorer from '@/modules/PlacesExplorer/PlacesExplorer.vue'
 </script>

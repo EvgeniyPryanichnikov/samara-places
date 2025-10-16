@@ -3,20 +3,16 @@ import { computed } from 'vue'
 import type { Place, PlaceStatuses } from '@/types'
 
 export const usePlaces = () => {
-  const { data, error, isFetching, execute } = useFetch<Place[]>('/data/places.json')
-    .get()
-    .json()
+  const { data, error, isFetching, execute } = useFetch<Place[]>('/data/places.json').
+    get().
+    json()
 
   // свойства для фильтрации
   const places = computed(() => data.value || [])
-  
-  const naturePlaces = computed(() => 
-    places.value.filter((place: Place) => place.type === 'nature')
-  )
-  
-  const cityPlaces = computed(() => 
-    places.value.filter((place: Place) => place.type === 'city')
-  )
+
+  const naturePlaces = computed(() => places.value.filter((place: Place) => place.type === 'nature'))
+
+  const cityPlaces = computed(() => places.value.filter((place: Place) => place.type === 'city'))
 
   // Фильтрация по статусам
   // const getPlacesByStatus = (statusKey: keyof PlaceStatuses, value: boolean = true): Place[] =>
@@ -26,10 +22,10 @@ export const usePlaces = () => {
     places,
     loading: isFetching,
     error,
-    
+
     naturePlaces,
-    cityPlaces,
-    
+    cityPlaces
+
     // getPlacesByStatus
   }
 }

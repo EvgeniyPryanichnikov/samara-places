@@ -9,7 +9,7 @@
     <div class="place-item__content">
       <h3>{{ placeData.title }}</h3>
 
-      <p 
+      <p
         class="place-item__description"
         :title="placeData.preview_description"
       >
@@ -22,7 +22,7 @@
     />
 
     <PlaceItemBtn
-      :placeId="placeData.id"
+      :place-id="placeData.id"
       @navigate-to-place="navigateToPlace"
     />
   </article>
@@ -36,24 +36,24 @@ import PlaceItemBtn from './PlaceItemBtn.vue'
 import PlaceItemStatuses from './PlaceItemStatuses.vue'
 import type { Place } from '@/types'
 
-const router = useRouter()
-
-const props = defineProps<{
+const { placeData } = defineProps<{
   placeData: Place;
 }>()
 
+const router = useRouter()
+
 const { setCurrentPlace } = useCurrentPlaceStore()
 
-const navigateToPlace = (placeId: number) => {
-  setCurrentPlace(props.placeData)
-  
+const navigateToPlace = () => {
+  setCurrentPlace(placeData)
+
   router.push({
     name: 'PlaceDetails',
     params: {
-      url_title: props.placeData.url_title
+      url_title: placeData.url_title
     },
     query: {
-      id: props.placeData.id,
+      id: placeData.id
     }
   })
 }

@@ -8,4 +8,3 @@
 import DefaultLayout from './core/layouts/DefaultLayout.vue'
 </script>
 
-<style scoped></style>

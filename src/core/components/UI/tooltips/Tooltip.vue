@@ -1,16 +1,16 @@
 <template>
   <div class="tooltip-wrapper">
-    <div 
+    <div
       class="tooltip-trigger"
       @mouseenter="show = true"
       @mouseleave="show = false"
     >
       <slot />
     </div>
-    
+
     <transition name="tooltip">
-      <div 
-        v-if="show && text" 
+      <div
+        v-if="show && text"
         class="tooltip"
         role="tooltip"
       >
@@ -24,7 +24,7 @@
 import { ref } from 'vue'
 
 const props = defineProps<{
-  text: string
+  text: string;
 }>()
 
 const show = ref(false)
@@ -51,7 +51,7 @@ const show = ref(false)
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
-    
+
     &::after {
       content: '';
       position: absolute;

@@ -1,15 +1,29 @@
 <template>
   <Teleport to="body">
-    <div class="modal" v-if="open">
-      <div class="modal-overlay" @click="$emit('close')"></div>
-      
+    <div
+      v-if="open"
+      class="modal"
+    >
+      <div
+        class="modal-overlay"
+        @click="$emit('close')"
+      />
+
       <div class="modal-content">
-        <button class="modal-close" @click="$emit('close')">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        <button
+          class="modal-close"
+          @click="$emit('close')"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
           </svg>
         </button>
-        
+
         <slot />
       </div>
     </div>
@@ -18,11 +32,11 @@
 
 <script setup lang="ts">
 defineProps<{
-  open: boolean
+  open: boolean;
 }>()
 
 defineEmits<{
-  close: []
+  close: [];
 }>()
 </script>
 
@@ -75,7 +89,7 @@ defineEmits<{
     justify-content: center;
     padding: 20px;
   }
-  
+
   .modal-content {
     width: auto;
     height: auto;

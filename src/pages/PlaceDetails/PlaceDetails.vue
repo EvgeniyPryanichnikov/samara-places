@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     v-if="place"
     class="place-detail"
   >
@@ -19,15 +19,15 @@ const { places, loading, error } = usePlaces()
 
 const place = computed(() => {
   const placeId = route.query.id
-  
+
   if (!placeId || places.value.length === 0) return null
-  
+
   return places.value.find((p: Place) => p.id === Number(placeId)) || null
 })
 </script>
 
 <style>
-  /* .place-detail {
+  .place-detail {
     height: 100px;
-  } */
+  }
 </style>

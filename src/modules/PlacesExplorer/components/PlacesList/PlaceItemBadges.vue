@@ -1,7 +1,7 @@
 <template>
   <div class="badges">
-    <span 
-      v-for="(badge, id) in badges" 
+    <span
+      v-for="(badge, id) in badges"
       :key="id"
       class="badge"
       :class="getBadgeColor(badge)"
@@ -13,23 +13,23 @@
 
 <script setup lang="ts">
 defineProps<{
-  badges: string[]
+  badges: string[];
 }>()
 
 const getBadgeColor = (badge: string) => {
   const colors: Record<string, string> = {
     'За Волгой': 'blue',
-    'Волга рядом': 'blue', 
+    'Волга рядом': 'blue',
     'За городом': 'green',
     'В городе': 'red',
-    'Погулять': 'orange',
+    Погулять: 'orange',
     'Катать на велике': 'green',
     'Пъём вкусное пиво': 'brown',
     'Cмотровая площадка': 'pink',
     'Красивый вид': 'purple',
-    'Достопримечательность': 'violet'
+    Достопримечательность: 'violet'
   }
-  
+
   return colors[badge] || 'gray'
 }
 </script>
@@ -45,40 +45,40 @@ const getBadgeColor = (badge: string) => {
       padding: 6px;
       border-radius: 10px;
 
-      &.blue { 
-        background: #a3d1ff; 
+      &.blue {
+        background: #a3d1ff;
         color: #1e40af;
       }
-      &.green { 
-        background: #a8f5cb; 
+      &.green {
+        background: #a8f5cb;
         color: #166534;
       }
-      &.red { 
-        background: #fdcaca; 
+      &.red {
+        background: #fdcaca;
         color: #991b1b;
       }
-      &.orange { 
-        background: #fef2c7; 
+      &.orange {
+        background: #fef2c7;
         color: #92400e;
       }
-      &.brown { 
-        background: #fbc9a9; 
+      &.brown {
+        background: #fbc9a9;
         color: #451a03;
       }
-      &.pink { 
-        background: #fbcfe8; 
+      &.pink {
+        background: #fbcfe8;
         color: #9d174d;
       }
-      &.purple { 
-        background: #d9d6f7; 
+      &.purple {
+        background: #d9d6f7;
         color: #5b21b6;
       }
-      &.violet { 
-        background: #dad3f9; 
+      &.violet {
+        background: #dad3f9;
         color: #5b21b6;
       }
-      &.gray { 
-        background: #e5e7eb; 
+      &.gray {
+        background: #e5e7eb;
         color: #374151;
       }
     }

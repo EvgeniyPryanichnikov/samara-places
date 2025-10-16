@@ -1,7 +1,8 @@
 <template>
   <button
+    class="place-item__button"
     @click="$emit('navigate-to-place', placeId)"
-    class="place-item__button">
+  >
     Вперёд
   </button>
 </template>
@@ -12,7 +13,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  'navigate-to-place': [id: number]
+  'navigate-to-place': [id: number];
 }>()
 </script>
 

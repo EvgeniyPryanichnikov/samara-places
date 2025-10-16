@@ -12,13 +12,13 @@
       </h2>
     </div>
 
-    <HeaderButton />
+    <HeroButton />
   </header>
 </template>
 
 <script setup lang="ts">
-// import HeaderNav from './HeaderNav.vue';
-import HeaderButton from './HeaderButton.vue';
+
+import HeroButton from './HeroButton.vue'
 </script>
 
 <style lang="scss" scoped>

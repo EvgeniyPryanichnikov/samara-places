@@ -1,5 +1,5 @@
 <template>
-  <ul 
+  <ul
     v-if="places"
     class="places-list"
   >
@@ -15,14 +15,14 @@
 import PlaceListItem from './PlaceListItem.vue'
 import type { Place } from '@/types'
 
-const props = defineProps<{
-  places: Place[]
+const { places } = defineProps<{
+  places: Place[];
 }>()
 </script>
 
 <style lang="scss" scoped>
   @import '@/assets/styles/abstracts/_mixins.scss';
-  
+
   .places-list {
     @include flex-column;
     overflow-y: scroll;

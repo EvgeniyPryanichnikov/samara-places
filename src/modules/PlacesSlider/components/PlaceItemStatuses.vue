@@ -35,42 +35,42 @@ const props = defineProps<{
 }>()
 
 const statusIcons: StatusIcon[] = [
-  { 
-    component: BeachIcon, 
-    key: 'has_beach', 
-    name: 'Пляж', 
+  {
+    component: BeachIcon,
+    key: 'has_beach',
+    name: 'Пляж',
     tooltip: 'Есть пляж'
   },
-  { 
-    component: BikeIcon, 
-    key: 'has_bike', 
-    name: 'Велосипед', 
-    tooltip: 'Катаем на велике!' 
+  {
+    component: BikeIcon,
+    key: 'has_bike',
+    name: 'Велосипед',
+    tooltip: 'Катаем на велике!'
   },
-  { 
-    component: HamburgerIcon, 
-    key: 'has_eat', 
-    name: 'Еда', 
-    tooltip: 'Есть где поесть' 
+  {
+    component: HamburgerIcon,
+    key: 'has_eat',
+    name: 'Еда',
+    tooltip: 'Есть где поесть'
   },
-  { 
-    component: NaturalIcon, 
-    key: 'has_nature', 
-    name: 'Природа', 
-    tooltip: 'Красивая природа' 
+  {
+    component: NaturalIcon,
+    key: 'has_nature',
+    name: 'Природа',
+    tooltip: 'Красивая природа'
   },
-  { 
-    component: OutdoorIcon, 
-    key: 'has_mountain', 
-    name: 'Горы', 
-    tooltip: 'Горные пейзажи' 
+  {
+    component: OutdoorIcon,
+    key: 'has_mountain',
+    name: 'Горы',
+    tooltip: 'Горные пейзажи'
   },
-  { 
-    component: TentIcon, 
-    key: 'has_camp', 
-    name: 'Кемпинг', 
-    tooltip: 'Можно ставить палатку' 
-  },
+  {
+    component: TentIcon,
+    key: 'has_camp',
+    name: 'Кемпинг',
+    tooltip: 'Можно ставить палатку'
+  }
 ]
 
 const activeIcons = computed(() => {
@@ -92,7 +92,7 @@ const stopPulsing = () => {
     justify-content: center;
     gap: 8px;
 
-    @include mq('768') {  
+    @include mq('768') {
       justify-content: start;
     }
   }

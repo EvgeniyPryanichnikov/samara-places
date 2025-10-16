@@ -1,6 +1,6 @@
 <template>
   <nav class="header__nav">
-    <ul 
+    <ul
       v-for="item in navItems"
       :key="item.id"
     >
@@ -13,10 +13,22 @@
 
 <script setup lang="ts">
 const navItems = [
-  {id: 1, title: 'Места'},
-  {id: 2, title: 'Карта'},
-  {id: 3, title: 'Галлерея'},
-  {id: 4, title: 'Погода'},
+  {
+    id: 1,
+    title: 'Места'
+  },
+  {
+    id: 2,
+    title: 'Карта'
+  },
+  {
+    id: 3,
+    title: 'Галлерея'
+  },
+  {
+    id: 4,
+    title: 'Погода'
+  }
 ]
 </script>
 

@@ -1,13 +1,10 @@
 <template>
   <button
     class="header__button pulse-simple"
-  > 
+  >
     Смотреть
   </button>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style lang="scss" scoped>
   @import '@/assets/styles/abstracts/_mixins.scss';
@@ -19,7 +16,7 @@
     border-radius: 16px;
     font-size: 16px;
 
-    @include mq('768') {  
+    @include mq('768') {
       padding: 20px;
       font-size: 24px;
     }
@@ -40,4 +37,4 @@
   .pulse-simple {
     animation: pulse-simple 1.5s ease-in-out infinite;
   }
-</style>  
+</style>

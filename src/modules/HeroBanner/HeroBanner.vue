@@ -1,19 +1,17 @@
 <template>
-  <header class="header">
-    <!-- <HeaderNav /> -->
-
-    <div class="header__content">
-      <h1 class="header__title">
+  <section class="hero-bunner">
+    <div class="hero-bunner__content">
+      <h1 class="hero-bunner__title">
         Самара
       </h1>
 
-      <h2 class="header__subtitle">
-        От Волжских просторов до Жигулёвских вершин.
+      <h2 class="hero-bunner__subtitle">
+        Самые красивые и интересные места рядом
       </h2>
     </div>
 
     <HeroButton />
-  </header>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -25,18 +23,19 @@ import HeroButton from './HeroButton.vue'
   @import '@/assets/styles/base/_typography.scss';
   @import '@/assets/styles/abstracts/_mixins.scss';
 
-  .header {
+  .hero-bunner {
     width: 100%;
     height: 100vh;
     @include flex-center;
     flex-direction: column;
     gap: 80px;
     background-image: url("/images/monument-slavy.webp");
+    // background-image: url("/images/ladya.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    .header__content {
+    &__content {
       color: white;
       @include fw-500;
       @include flex-column;
@@ -45,21 +44,21 @@ import HeroButton from './HeroButton.vue'
       margin-top: 40px;
     }
 
-    .header__title {
+    &__title {
       font-size: 60px;
     }
 
-    .header__subtitle {
+    &__subtitle {
       text-align: center;
       font-size: 20px;
     }
 
     @include mq('768') {
-      .header__subtitle {
+      &__subtitle {
         font-size: 30px;
       }
 
-      .header__title {
+      &__title {
         font-size: 100px;
       }
     }

@@ -33,7 +33,7 @@ import 'vue3-carousel/dist/carousel.css'
 import PlaceItem from './components/PlaceItem.vue'
 import { usePlaces } from '@/core/composables/usePlaces'
 
-const { places, loading, error } = usePlaces()
+const { places } = usePlaces()
 
 // Адаптивность
 const breakpoints = ref({
@@ -61,13 +61,14 @@ const breakpoints = ref({
     padding: 20px 0;
 
     @include mq('768') {
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     .places-slider__title {
+      color: #002147;
       font-size: 30px;
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
     .places-slider__container {
       display: flex;

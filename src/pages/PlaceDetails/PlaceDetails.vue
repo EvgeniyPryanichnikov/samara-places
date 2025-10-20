@@ -4,7 +4,7 @@
     class="place-detail"
   >
     <!-- Карусель фотографий -->
-    <div class="place-gallery">
+    <div class="place-detail__gallery">
       <Carousel
         v-if="place.main_images && place.main_images.length > 0"
         :items-to-show="1"
@@ -16,12 +16,12 @@
           v-for="(image, index) in place.main_images"
           :key="index"
         >
-          <div class="carousel__item">
-            <img
+          <div class="place-detail__carousel-item">
+            <BaseImage
               :src="image"
               :alt="`${place.title} - фото ${index + 1}`"
-              class="carousel__image"
-            >
+              class="place-detail__image"
+            />
           </div>
         </Slide>
 
@@ -34,8 +34,8 @@
     </div>
 
     <!-- Контент места -->
-    <div class="place-content">
-      <h1 class="place-title">
+    <div class="place-detail__content">
+      <h1 class="place-detail__title">
         {{ place.title }}
       </h1>
     </div>
@@ -46,6 +46,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import BaseImage from '@/core/components/UI/image/BaseImage.vue'
 import { usePlaces } from '@/core/composables/usePlaces'
 import type { Place } from '@/types'
 
@@ -63,72 +64,6 @@ const place = computed(() => {
 })
 </script>
 
-<style scoped>
-.place-detail {
-  /* background-color: rgba(59, 130, 246, 0.1); */
-  max-width: 1200px;
-  margin: 0 auto;
-  /* padding: 40px; */
-  min-height: 100vh;
-}
-
-.place-gallery {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-}
-
-.carousel__item {
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.place-content {
-  padding: 40px 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-.place-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Кастомные стили для карусели */
-:deep(.carousel__prev),
-:deep(.carousel__next) {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-:deep(.carousel__pagination) {
-  position: absolute;
-  bottom: 20px;
-}
-
-:deep(.carousel__pagination-button) {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 12px;
-  height: 12px;
-  margin: 0 4px;
-  border-radius: 50%;
-}
-
-:deep(.carousel__pagination-button--active) {
-  background-color: white;
-}
+<style scoped lang="scss">
+  @import '@/assets/styles/components/place-detail';
 </style>

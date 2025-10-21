@@ -1,6 +1,6 @@
 <template>
   <div class="place-selector">
-    <h2>Найди своё место в Самаре</h2>
+    <h2>Исследуй Самару на карте</h2>
 
     <WeatherWidget />
 

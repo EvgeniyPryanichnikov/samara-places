@@ -1,7 +1,7 @@
 <template>
   <section class="places-slider">
     <h2 class="places-slider__title">
-      Места
+      Для прогулок и отдыха
     </h2>
 
     <Carousel
@@ -64,13 +64,13 @@ const breakpoints = ref({
       padding: 40px 20px;
     }
 
-    .places-slider__title {
-      color: #002147;
-      font-size: 30px;
+    &__title {
+      color: #1e358d;
+      font-size: 38px;
       text-align: center;
       margin-bottom: 24px;
     }
-    .places-slider__container {
+    &__container {
       display: flex;
       gap: 18px;
     }
@@ -83,6 +83,17 @@ const breakpoints = ref({
         right: 0;
         top: 35%;
         display: block;
+      }
+    }
+    .carousel__prev {
+      @include mq('1024') {
+        left: -10px;
+      }
+    }
+
+    .carousel__next {
+      @include mq('1024') {
+        right: -10px;
       }
     }
     .carousel__pagination-button {

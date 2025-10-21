@@ -3,7 +3,6 @@
     v-if="place"
     class="place-detail"
   >
-    <!-- Карусель фотографий -->
     <div class="place-detail__gallery">
       <Carousel
         v-if="place.main_images && place.main_images.length > 0"
@@ -38,6 +37,11 @@
       <h1 class="place-detail__title">
         {{ place.title }}
       </h1>
+
+      <div
+        class="place-detail__description"
+        v-html="place.main_description"
+      />
     </div>
   </div>
 </template>

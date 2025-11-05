@@ -19,7 +19,7 @@ const app = createApp(App)
 app.use(router)
 app.use(pinia)
 app.use(createYmaps({
-  apikey: 'b76836b0-84d2-4ef3-ba91-9320bb884642'
+  apikey: import.meta.env.VITE_YANDEX_MAPS_API_KEY
 }))
 
 app.config.errorHandler = (err, instance, info) => {

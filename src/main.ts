@@ -28,7 +28,6 @@ app.config.errorHandler = (err, instance, info) => {
   console.error('Компонент:', instance)
 }
 
-// Дожидаюсь готовности роутера перед монтированием
 router.isReady().then(() => {
   app.mount('#app')
 })

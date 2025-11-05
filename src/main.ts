@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { createYmaps } from 'vue-yandex-maps'
 import App from './App.vue'
 import '@/assets/styles/main.scss'
@@ -8,7 +8,7 @@ import '@/assets/styles/main.scss'
 import routes from './router.ts'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 

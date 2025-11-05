@@ -13,6 +13,8 @@ export default defineConfig({
     svgLoader()
   ],
 
+  base: '/samara-places/',
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

@@ -3,7 +3,11 @@ import { computed } from 'vue'
 import type { Place, PlaceStatuses } from '@/types'
 
 export const usePlaces = () => {
-  const { data, error, isFetching, execute } = useFetch<Place[]>('/data/places.json').
+  const basePath = window.location.hostname === 'evgeniypryanichnikov.github.io'
+    ? '/samara-places'
+    : ''
+
+  const { data, error, isFetching, execute } = useFetch<Place[]>(`${basePath}/data/places.json`).
     get().
     json()
 
